@@ -1,5 +1,5 @@
 # Engineering 4 Notebook
-These are my Engineering 4 assignments and projects
+These are my Engineering 4 assignments to learn to use the Raspberry Pi
 ## Hello Raspberry Pi
 ![alt text](images/nanohelloworld.py.png)
 ![alt text](images/python3helloworld.py.png)
