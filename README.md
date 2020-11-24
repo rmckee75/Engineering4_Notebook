@@ -32,8 +32,8 @@ In this assignment, I created a program which will split a user-inputted sentenc
 ### Reflection
 In this assignment, I created a man shaped piñata (also known as hangman) game, where one player inputs a word or phrase, and the other player must guess the letters in the phrase before all the parts of the piñata/hangman are drawn and it is burst open/killed.  This was by far the longest program I have written on the Raspberry Pi, although there are probably a few redundant lines.  In brief terms, to create this program I split the phrase entered by Player 1 into its letters and stored these letters in one array while creating another array which added a cooresponding blank space for each letter. When Player 2 guessed a correct letter, the program stored the locations of all instances of the correctly guessed letter in a third array called runnums, and then ran this array through a for loop, adding the guessed letter to the blanks array at each location indicated by the runnums array.  Then, the blanks array could be printed out to Player 2, and would only show them the letters they had already guessed, while the other spots remained as blanks. If the user guessed the correct phrase, all blanks would automatically be filled, and when there are no blanks left, the program tells player 1 that they have won.  To draw the man-shaped piñata I had a "wrong" tracker which increased by 1 at every incorrect guess. Depending on the number of wrong guesses, that number of parts of the piñata would be drawn.  One twist to the traditional rules of hangman that I hadn't realized would occur is that the player must specify whether they are guessing a capital or lowercase letter, and in reality this game could include commas, periods, or any type of character printable in Linux.
 ## GPIO Pins - Bash
-![alt text](images/GPIOBashRed.png)
-![alt text](images/GPIOBashGreen.png)
+![alt text](images/GPIOBashRed.jpg)
+![alt text](images/GPIOBashGreen.jpg)
 ### Wiring
 ![alt text](images/GPIOBashWiring.png)
 ### Reflection
