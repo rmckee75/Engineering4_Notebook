@@ -37,3 +37,9 @@ In this assignment, I created a man shaped piñata (also known as hangman) game,
 ![alt text](images/GPIOBashWiring.png)
 ### Reflection
 In this assignment, I used the raspberry pi to control hardware for the first time. Specifically, I made two LEDs alternate blinking 10 times.  I wrote this code in bash, which is relatively easy to understand, but not as easy as Python, and there are a few weird parts, such as not needing spaces before or after equal signs and needing a $ before using a variable to set the condition for a while loop.  As this was my first use of hardware, I also had to figure out how to diagram my wiring.  I ended up just using Google Drawings, which worked surprisingly well.  I just drew lines to represent wires and I was able to find reusable images of the Raspberry Pi, Resistors, and LEDs at the [Raspberry Pi Learning GitHub Repository](https://github.com/raspberrypilearning/components/tree/master/components).  As this repo only had a red LED, I also used [Online PNG Tools](https://onlinepngtools.com/change-png-color) to create a green LED image.
+## GPIO Pins - Python
+![alt text](images/GPIOPython.jpg) 
+### Wiring
+![alt text](images/GPIOBashWiring.png)
+### Reflection
+To do this assignment, I wrote basically the same code as in the bash assignment, except in Python, which makes more sense. Additionally, the wiring was the exact same. I found it very useful to import all of the functions I needed from the RPi.GPIO library, rather than just importing the library, so I didn't have to type GPIO before every function.  It was helpful to be able to set the board mode to BCM, which allows you to call pins by their number on the pi, rather than their cooresponding, seemingly random "wiring number."  Overall, simple LED code like this was basically the same as in other languages: you set the pins as input or output, then you write each pin as HIGH or LOW.
