@@ -43,3 +43,9 @@ In this assignment, I used the raspberry pi to control hardware for the first ti
 ![alt text](images/GPIOBashWiring.png)
 ### Reflection
 To do this assignment, I wrote basically the same code as in the bash assignment, except in Python, which makes more sense. Additionally, the wiring was the exact same. I found it very useful to import all of the functions I needed from the RPi.GPIO library, rather than just importing the library, so I didn't have to type GPIO before every function.  It was helpful to be able to set the board mode to BCM, which allows you to call pins by their number on the pi, rather than their cooresponding, seemingly random "wiring number."  Overall, simple LED code like this was basically the same as in other languages: you set the pins as input or output, then you write each pin as HIGH or LOW.
+## GPIO Pins - SSH
+![alt text](images/GPIO_SSH.jpg) 
+### Wiring
+![alt text](images/GPIO_SSH_Wiring.png)
+### Reflection
+In this assignment, I used SSH (via the Secure Shell App on the Chromebook) to connect to my Raspberry Pi remotely.  This meant that I was able to log in to my pi and blink LEDs while it was in another room. By far the hardest part of this assignment was getting the pi connected to SSH, but when I realized that all I had to do was make sure that both the pi AND my computer were connected to the same wifi (my phone hotspot), all I had to was log in and run the python code (which I had already written for the previous assignment).  I used the same LED wiring as for the GPIO assignments, except instead of using the USB cable for power, I used the LiPo battery and the power boost for the pi. 
