@@ -49,3 +49,9 @@ To do this assignment, I wrote basically the same code as in the bash assignment
 ![alt text](images/GPIO_SSH_Wiring.png)
 ### Reflection
 In this assignment, I used SSH (via the Secure Shell App on the Chromebook) to connect to my Raspberry Pi remotely.  This meant that I was able to log in to my pi and blink LEDs while it was in another room. By far the hardest part of this assignment was getting the pi connected to SSH, but when I realized that all I had to do was make sure that both the pi AND my computer were connected to the same wifi (my phone hotspot), all I had to was log in and run the python code (which I had already written for the previous assignment).  I used the same LED wiring as for the GPIO assignments, except instead of using the USB cable for power, I used the LiPo battery and the power boost for the pi. 
+## GPIO Pins - I2C
+![alt text](images/GPIO_I2C.jpg) 
+### Wiring
+![alt text](images/GPIO_I2CWiring.png)
+### Reflection
+In this assignment, I used the LSM303 accelerometer and the SSD1306 OLED display to display the x, y, and z acceleration values on the OLED screen.  To do this, I installed the relevant libraries for each new piece of hardware. Both of these libraries had example codes which were very useful for me, so in the end, I only had to write a few lines of code: the rest I just copied from the examples (simpletest.py for the accelerometer and shapes.py for the display).  All that I did was divide the the acceleration by 100 to convert it to m/s and format the text correctly on the display.  For my wiring diagram, I used these images for the: [Accelerometer](https://learn.adafruit.com/lsm303-accelerometer-slash-compass-breakout?view=all) and [OLED Display](https://www.reichelt.com/de/en/developer-boards-display-oled-1-3-128x64-pixel-ssd1306-debo-oled-1-3-p235524.html).  I've also found that the free online tool remove.bg is very useful for removing backgrounds from an image.
