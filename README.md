@@ -50,7 +50,7 @@ To do this assignment, I wrote basically the same code as in the bash assignment
 ### Reflection
 In this assignment, I used SSH (via the Secure Shell App on the Chromebook) to connect to my Raspberry Pi remotely.  This meant that I was able to log in to my pi and blink LEDs while it was in another room. By far the hardest part of this assignment was getting the pi connected to SSH, but when I realized that all I had to do was make sure that both the pi AND my computer were connected to the same wifi (my phone hotspot), all I had to was log in and run the python code (which I had already written for the previous assignment).  I used the same LED wiring as for the GPIO assignments, except instead of using the USB cable for power, I used the LiPo battery and the power boost for the pi. 
 ## GPIO Pins - I2C
-![alt text](images/GPIO_I2C.png) 
+![alt text](images/GPIO_I2c.png) 
 ### Wiring
 ![alt text](images/GPIO_I2CWiring.png)
 ### Reflection
