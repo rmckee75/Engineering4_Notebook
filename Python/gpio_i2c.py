@@ -67,7 +67,7 @@ while True:
     # Grab the X, Y, Z components from the reading and print them out.
     accel_x, accel_y, accel_z = accel
     mag_x, mag_y, mag_z = mag
-    # Converts acceleration values from cm/s to m/s2
+    # Converts acceleration values from cm/s2 to m/s2
     xaccel = (accel_x)/100
     yaccel = (accel_y)/100
     zaccel = (accel_z)/100
