@@ -57,17 +57,17 @@ while True:
     draw.rectangle((0,0,width,height), outline=0, fill=0)
     # Writes the labels for acceleration values
     # Starts at the top left (with padding)
-    draw.text((x, top),   "X accel (m/s)=",  font=font, fill=255)
+    draw.text((x, top),   "X accel (m/s2) =",  font=font, fill=255)
     # Then writes 20 units down
-    draw.text((x, top+20), "Y accel (m/s)=", font=font, fill=255)
+    draw.text((x, top+20), "Y accel (m/s2) =", font=font, fill=255)
     # Then writes 40 units down
-    draw.text((x, top+40), "Z accel (m/s)=", font=font, fill=255)
-    # Read the X, Y, Z axis acceleration values and print them.
+    draw.text((x, top+40), "Z accel (m/s2) =", font=font, fill=255)
+    # Read the X, Y, Z axis acceleration v alues and print them.
     accel, mag = lsm303.read()
     # Grab the X, Y, Z components from the reading and print them out.
     accel_x, accel_y, accel_z = accel
     mag_x, mag_y, mag_z = mag
-    # Converts acceleration values from cm/s to m/s
+    # Converts acceleration values from cm/s to m/s2
     xaccel = (accel_x)/100
     yaccel = (accel_y)/100
     zaccel = (accel_z)/100
