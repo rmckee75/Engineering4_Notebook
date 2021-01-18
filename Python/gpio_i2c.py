@@ -57,11 +57,11 @@ while True:
     draw.rectangle((0,0,width,height), outline=0, fill=0)
     # Writes the labels for acceleration values
     # Starts at the top left (with padding)
-    draw.text((x, top),   "X accel (m/s2) =",  font=font, fill=255)
+    draw.text((x, top),   "X accel (m/s2)=",  font=font, fill=255)
     # Then writes 20 units down
-    draw.text((x, top+20), "Y accel (m/s2) =", font=font, fill=255)
+    draw.text((x, top+20), "Y accel (m/s2)=", font=font, fill=255)
     # Then writes 40 units down
-    draw.text((x, top+40), "Z accel (m/s2) =", font=font, fill=255)
+    draw.text((x, top+40), "Z accel (m/s2)=", font=font, fill=255)
     # Read the X, Y, Z axis acceleration v alues and print them.
     accel, mag = lsm303.read()
     # Grab the X, Y, Z components from the reading and print them out.
@@ -72,9 +72,9 @@ while True:
     yaccel = (accel_y)/100
     zaccel = (accel_z)/100
     # Writes each acceleration value next to its label, 90 units from the left padding
-    draw.text((x+90, top),   str(xaccel),  font=font, fill=255)
-    draw.text((x+90, top+20),   str(yaccel),  font=font, fill=255)
-    draw.text((x+90, top+40),   str(zaccel),  font=font, fill=255)
+    draw.text((x+95, top),   str(xaccel),  font=font, fill=255)
+    draw.text((x+95, top+20),   str(yaccel),  font=font, fill=255)
+    draw.text((x+95, top+40),   str(zaccel),  font=font, fill=255)
     # Display image.
     disp.image(image)
     disp.display()
