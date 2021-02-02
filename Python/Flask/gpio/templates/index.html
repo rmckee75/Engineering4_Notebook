@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+     <title>GPIO LEDs</title>
+<style>
+body{
+background-color: DarkSlateGray
+}
+.button{
+     border: Solid;
+     border-color: DarkSlateGray;
+     border-radius: 10%;
+     height: 780px;
+     width: 49%;
+     margin: 0.40%;
+     cursor: pointer;
+     display: inline-block;
+     text-decoration: none;
+     font-size: 100px;
+     font-width: bold;
+}
+.red{
+     background-color: Red;
+}
+.green{
+     background-color: LawnGreen;
+}
+</style>
+</head>
+<body>
+<form method="POST" id="red">
+     <input type="hidden" name="color" value="RED"> 
+</form>
+<form method="POST" id="green">
+     <input type="hidden" name="color" value="GREEN">
+</form>
+<button class="button red" form="red" type="submit" name="red_btn" value="ON">{{msg1}}</button>
+<button class="button green" form="green" type="submit" name="green_btn" value="ON">{{msg2}}</button>
+</body>
+</html>
