@@ -1,10 +1,13 @@
 import picamera
 from time import sleep
 from datetime import datetime
+import os
 # Import the relevant functions and modules
 
 with picamera.PiCamera() as camera:
 # Rename the PiCamera object as just "camera"
+     os.chdir("Camera_Images")
+# Changes directory to Python/Camera_Images folder, so that pictures will be saved there
      go = "y"
 # Set condition for while loop
      while go == "y":
