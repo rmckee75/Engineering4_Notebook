@@ -65,3 +65,9 @@ In this assignment, I used the code to collect x-component acceleration data fro
 ![alt text](images/HelloFlask.png) 
 ### Reflection
 This assignment was very simple; all I had to do was copy the code for a file called app.py, which creates a flask app that allows the raspberry pi to operate as a web server.  This means that when the raspberry pi's IP address was called by another computer on the same network, it will display a website with the words "Hello World!".
+## GPIO Pins - Flask
+![alt text](images/GPIOFlaskWebsite.png) 
+### Wiring
+![alt text](images/GPIO_SSH_Wiring.png)
+### Reflection
+In this assignment, I used Flask to create a webpage which had two buttons which a user could use to turn two LEDs on and off (independently).  While I already had the code to turn one LED on and off, the hardest part of this assignment was changing that code so that the two LEDs could be controlled independently.  To do this, in my index.html file, I created two different html forms, one for each LED, each with its own linked button.  These forms both had "hidden inputs" with unique "color" values, and in my app.py file, I used request.form to identify the "color" of the button which was pressed, and then had two separate if statements for each LED. In order to make sure that clicking the button always changed the state of the button, I also had to set up the LEDs as inputs, and then turn them on our off based on a read of their current state.  Finally, I used CSS within my index.html file to stylize my webpage, so that the buttons had their respective colors and filled the entire screen.  I found html code quite tedious and overcomplicated to use, especially for commenting, but it wasn't actually that confusing when I learned the syntax.
