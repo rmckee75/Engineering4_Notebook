@@ -37,15 +37,15 @@ with picamera.PiCamera() as camera:
           picname6 = (s.join(pic6))
 # Combine the elements of the pic array to form the picname
           camera.capture (picname1)
-          image_effect = "emboss"
+          camera.image_effect = "emboss"
           camera.capture (picname2)
-          image_effect = "watercolor"
+          camera.image_effect = "watercolor"
           camera.capture (picname3)
-          image_effect = "blur"
+          camera.image_effect = "blur"
           camera.capture (picname4)
-          image_effect = "colorswap"
+          camera.image_effect = "colorswap"
           camera.capture (picname5)
-          image_effect = "cartoon"
+          camera.image_effect = "cartoon"
           camera.capture (picname6)
 # Take a picture and store it with a unique picname
           print ("Done!")
