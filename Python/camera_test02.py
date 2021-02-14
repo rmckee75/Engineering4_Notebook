@@ -16,25 +16,26 @@ with picamera.PiCamera() as camera:
      while go == "y":
 # Repeats as long as go = "y" (which it always does)
           name = input("What do you want to name this set of pictures?")
-# Finds the current date and time, stores them as a (this serves as a unique identifier for each picture)
+# Asks the user to give each set of pictures a unique identifier
           print ("running...")
-# Convert the date and time to string format
           pic1 = ["normal", name, ".jpg"]
+# No effect
           pic2 = ["emboss", name, ".jpg"]
+# Black and white, depth highlighted
           pic3 = ["watercolor", name, ".jpg"]
           pic4 = ["oilpaint", name, ".jpg"]
           pic5 = ["colorswap", name, ".jpg"]
           pic6 = ["cartoon", name, ".jpg"]
-# Create an array with the parts of the eventual name of the picture
+# Creates 6 arrays with the parts of the eventual name of each picture
           s = "_"
-# The separator in the picture name
+# The separator in the picture names
           picname1 = (s.join(pic1))
           picname2 = (s.join(pic2))
           picname3 = (s.join(pic3))
           picname4 = (s.join(pic4))
           picname5 = (s.join(pic5))
           picname6 = (s.join(pic6))
-# Combine the elements of the pic array to form the picname
+# Combine the elements of the pic array to form the picnames
           camera.capture (picname1)
           camera.image_effect = "emboss"
           camera.capture (picname2)
@@ -46,7 +47,7 @@ with picamera.PiCamera() as camera:
           camera.capture (picname5)
           camera.image_effect = "cartoon"
           camera.capture (picname6)
-# Take a picture and store it with a unique picname
+# Take 6 pictures with 6 different effects and store each with a unique picname
           print ("Done!")
           print (picname1)
           print (picname2)
@@ -59,7 +60,7 @@ with picamera.PiCamera() as camera:
                break
           if again == "N":
                break
-# Ask the user if they want to take another picture, stop the program if they say no
+# Ask the user if they want to take another set of pictures, stop the program if they say no
           sleep (1)
 # Wait a second
 
