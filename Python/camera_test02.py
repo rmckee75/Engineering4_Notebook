@@ -20,11 +20,12 @@ with picamera.PiCamera() as camera:
           print ("running...")
           num = str(a)
 # Convert the date and time to string format
-          pic1 = ["cloudy", num, ".jpg"]
-          pic2 = ["shade", num, ".jpg"]
-          pic3 = ["fluorescent", num, ".jpg"]
-          pic4 = ["horizon", num, ".jpg"]
-          pic5 = ["tungsten", num, ".jpg"]
+          pic1 = ["normal", num, ".jpg"]
+          pic2 = ["emboss", num, ".jpg"]
+          pic3 = ["watercolor", num, ".jpg"]
+          pic4 = ["blur", num, ".jpg"]
+          pic5 = ["colorswap", num, ".jpg"]
+          pic6 = ["cartoon", num, ".jpg"]
 # Create an array with the parts of the eventual name of the picture
           s = "_"
 # The separator in the picture name
@@ -33,19 +34,19 @@ with picamera.PiCamera() as camera:
           picname3 = (s.join(pic3))
           picname4 = (s.join(pic4))
           picname5 = (s.join(pic5))
-
+          picname6 = (s.join(pic6))
 # Combine the elements of the pic array to form the picname
-          awb_mode = "cloudy"
-          camera.capture(picname1)
-          awb_mode = "shade"
-          camera.capture(picname2)
-          awb_mode = "fluorescent"
-          camera.capture(picname3)
-          awb_mode = "horizon"
-          camera.capture(picname4)
-          awb_mode = "tungsten"
-          camera.capture(picname5)
-
+          camera.capture (picname1)
+          image_effect = "emboss"
+          camera.capture (picname2)
+          image_effect = "watercolor"
+          camera.capture (picname3)
+          image_effect = "blur"
+          camera.capture (picname4)
+          image_effect = "colorswap"
+          camera.capture (picname5)
+          image_effect = "cartoon"
+          camera.capture (picname6)
 # Take a picture and store it with a unique picname
           print ("Done!")
           print (picname1)
@@ -53,6 +54,7 @@ with picamera.PiCamera() as camera:
           print (picname3)
           print (picname4)
           print (picname5)
+          print (picname6)
           again = input ("Do you want to take another set of pictures? Enter Y or N:")
           if again == "n":
                break
