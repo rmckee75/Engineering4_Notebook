@@ -15,17 +15,16 @@ with picamera.PiCamera() as camera:
 # Set condition for while loop
      while go == "y":
 # Repeats as long as go = "y" (which it always does)
-          a = datetime.now()
+          name = input("What do you want to name this set of pictures?")
 # Finds the current date and time, stores them as a (this serves as a unique identifier for each picture)
           print ("running...")
-          num = str(a)
 # Convert the date and time to string format
-          pic1 = ["normal", num, ".jpg"]
-          pic2 = ["emboss", num, ".jpg"]
-          pic3 = ["watercolor", num, ".jpg"]
-          pic4 = ["blur", num, ".jpg"]
-          pic5 = ["colorswap", num, ".jpg"]
-          pic6 = ["cartoon", num, ".jpg"]
+          pic1 = ["normal", name, ".jpg"]
+          pic2 = ["emboss", name, ".jpg"]
+          pic3 = ["watercolor", name, ".jpg"]
+          pic4 = ["oilpaint", name, ".jpg"]
+          pic5 = ["colorswap", name, ".jpg"]
+          pic6 = ["cartoon", name, ".jpg"]
 # Create an array with the parts of the eventual name of the picture
           s = "_"
 # The separator in the picture name
@@ -41,7 +40,7 @@ with picamera.PiCamera() as camera:
           camera.capture (picname2)
           camera.image_effect = "watercolor"
           camera.capture (picname3)
-          camera.image_effect = "blur"
+          camera.image_effect = "oilpaint"
           camera.capture (picname4)
           camera.image_effect = "colorswap"
           camera.capture (picname5)
