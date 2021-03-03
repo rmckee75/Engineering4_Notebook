@@ -13,7 +13,7 @@ while True:
      os.chdir("Camera_Videos")
 # Changes directory to Python/Camera_Videos folder, so that videos will be saved there
      time = datetime.now()
-     timestamp = time.strftime("%d_%m_%Y_%H_%M_%S")
+     timestamp = time.strftime("%Y_%m_%d_%H_%M_%S")
 # Finds the current date and time, stores them as a (this serves as a unique identifier for each picture)
 # Convert the date and time to string format
      video = [timestamp, ".h264"]
