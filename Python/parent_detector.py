@@ -10,13 +10,13 @@ import subprocess
 PIR = MotionSensor(4)
 # The motion detector is plugged into GPIO Pin #4
 camera = PiCamera()
+os.chdir("Camera_Videos")
+# Changes directory to Python/Camera_Videos folder, so that videos will be saved there
 while True:
 # The motion activated camera runs on an infinite loop
      PIR.wait_for_motion()
 # Do nothing until motion is detected
      print ("Motion Detected!")
-     os.chdir("Camera_Videos")
-# Changes directory to Python/Camera_Videos folder, so that videos will be saved there
      time = datetime.now()
      timestamp = time.strftime("%Y_%m_%d_%H_%M_%S")
 # Convert the date and time to string format
