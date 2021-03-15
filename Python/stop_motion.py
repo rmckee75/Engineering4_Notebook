@@ -24,5 +24,8 @@ while True:
           video = [name, ".mp4"]
           s = ""
           videoname = s.join(video)
-          call(["ffmpeg", "-r", "10", "-i", picname, "-qscale", "2", videoname])
+          call_pic = [name, "frame%03d.jpg"]
+          s = "_"
+          call_picnames = s.join(call_pic)
+          call(["ffmpeg", "-r", "10", "-i", call_picnames, "-qscale", "2", videoname])
           break
