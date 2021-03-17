@@ -16,7 +16,7 @@ while True:
           pic = [name, "frame%03d.jpg" % frame]
           s = "_"
           picname = s.join(pic)
-          sleep(3)
+          sleep(1)
           camera.capture(picname)
           print(picname)
           frame = frame + 1
